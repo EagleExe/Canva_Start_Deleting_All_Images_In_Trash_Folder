@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Canva Start Deleting
 // @namespace    http://tampermonkey.net/
-// @version      2024-04-12
+// @version      2024-04-13
 // @description  Canva - Empty ALL Images from Trash folder - simplest way - UPDATED 2024 https://youtu.be/M_nLi4oTN2U
 // @author       James Vincent Carroll II
 // @license      MIT
@@ -25,5 +25,5 @@ function fn_start_deleting() {
 		setTimeout(()=> $('span:contains("Delete from Trash")').click(), 200);
 	}, 1000);
 }
-let btn = $('<div>').css(btncss).text('Start Deleting').click(fn_start_deleting);
+const btn = $('<div>').css(btncss).text('Start Deleting').click(fn_start_deleting);
 $('body').append(btn);
